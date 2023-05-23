@@ -10,7 +10,12 @@ public class Anagram
 
         return new List<string>()
         {
-            "ABC", "ACB", "BAC", "BCA", "CAB", "CBA"
+            "A" + "BC", 
+            "A" + "CB", 
+            "B" + "AC", 
+            "B" + "CA", 
+            "C" + "AB", 
+            "C" + "BA"
         };
     }
 }
