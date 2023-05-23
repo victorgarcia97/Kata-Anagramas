@@ -9,8 +9,8 @@ namespace AnagramsKata.Tests
         {
             var result = Anagram.GetAnagrams();
 
-            var expectedAnagrams = new List<string>() { " " };
-            result.Should().Be(expectedAnagrams);
+            var expectedAnagrams = new List<string>() { "" };
+            result.Should().BeEquivalentTo(expectedAnagrams);
         }
     }
 }

@@ -2,8 +2,8 @@ namespace AnagramsKata.Tests;
 
 public class Anagram
 {
-    public static object GetAnagrams()
+    public static List<string> GetAnagrams()
     {
-        throw new NotImplementedException();
+        return new List<string> { "" };
     }
 }
