@@ -12,9 +12,9 @@ public class Anagram
         {
             var firstLetter = s.Substring(i, 1);
             var anagramsOfRest = Of(GetStringWithoutCharAt(s, i));
-            for (var j = 0; j < anagramsOfRest.Count; j++)
+            foreach (var anagram in anagramsOfRest)
             {
-                anagrams.Add(firstLetter + anagramsOfRest[j]);
+                anagrams.Add(firstLetter + anagram);
             }
         }
 
