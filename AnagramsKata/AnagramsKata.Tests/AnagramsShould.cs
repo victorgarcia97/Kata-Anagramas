@@ -30,5 +30,14 @@ namespace AnagramsKata.Tests
             var expectedAnagrams = new List<string>() { "AB", "BA" };
             result.Should().BeEquivalentTo(expectedAnagrams);
         }
+
+        [Test]
+        public void ReturnAnagramOfThreeLetters()
+        {
+            var result = Anagram.Of("ABC");
+
+            var expectedAnagrams = new List<string>() { "ABC", "ACB", "BAC", "BCA", "CAB", "CBA" };
+            result.Should().BeEquivalentTo(expectedAnagrams);
+        }
     }
 }
