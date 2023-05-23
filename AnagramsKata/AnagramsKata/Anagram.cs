@@ -10,10 +10,12 @@ public class Anagram
 
         var anagrams = new List<string>();
 
-        for (int i = 0; i < s.Length; i++)
+        for (var i = 0; i < s.Length; i++)
         {
-            anagrams.Add(s.Substring(i, 1) + Of(GetStringWithoutCharAt(s, i))[0]);
-            anagrams.Add(s.Substring(i, 1) + Of(GetStringWithoutCharAt(s, i))[1]);
+            for (var j = 0; j < s.Length - 1; j++)
+            {
+                anagrams.Add(s.Substring(i, 1) + Of(GetStringWithoutCharAt(s, i))[j]);
+            }
         }
 
         return anagrams;
