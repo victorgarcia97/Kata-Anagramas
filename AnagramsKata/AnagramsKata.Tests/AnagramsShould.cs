@@ -21,5 +21,14 @@ namespace AnagramsKata.Tests
             var expectedAnagrams = new List<string>() { "A" };
             result.Should().BeEquivalentTo(expectedAnagrams);
         }
+
+        [Test]
+        public void ReturnAnagramOfTwoLetters()
+        {
+            var result = Anagram.Of("AB");
+
+            var expectedAnagrams = new List<string>() { "AB", "BA" };
+            result.Should().BeEquivalentTo(expectedAnagrams);
+        }
     }
 }
