@@ -53,6 +53,15 @@ namespace AnagramsKata.Tests
             };
             result.Should().BeEquivalentTo(expectedAnagrams);
         }
+
+        [Test]
+        public void HaveTheSameNumberOfElementsAsExpectedWithFiveLetters()
+        {
+            var result = Anagram.Of("ABCDE");
+
+            result.Count.Should().Be(120);
+
+        }
     }
 }
 
