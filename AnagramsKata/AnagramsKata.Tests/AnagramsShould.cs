@@ -46,13 +46,19 @@ namespace AnagramsKata.Tests
             var result = Anagram.Of("ABCD");
 
             var expectedAnagrams = new List<string>() { 
-                "ABCD", "BCDA", "CDAB", "DBAC",
-                "ABDC", "BCAD", "CDBA", "DBCA",
-                "ACDB", "BDAC", "CABD", "DCBA",
-                "ACBD", "BDCA", "CADB", "DCAB",
-                "ADBC", "BACD", "CBAD", "DABC",
-                "ABDC", "BADC", "CBDA", "DACB" };
+                "ABCD", "ABDC", "ACDB", "ACBD", "ADBC", "ADCB",
+                "BCDA", "BCAD", "BDAC", "BDCA", "BACD", "BADC",
+                "CDAB", "CDBA", "CABD", "CADB", "CBAD", "CBDA",
+                "DBAC", "DBCA", "DCBA", "DCAB", "DABC", "DACB"
+            };
             result.Should().BeEquivalentTo(expectedAnagrams);
         }
     }
 }
+
+  
+  
+  
+  
+  
+  
