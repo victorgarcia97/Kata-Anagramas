@@ -6,8 +6,6 @@ public class Anagram
     {
         if(s.Length <= 1 ) return new List<string> { s };
 
-        if(s.Length == 2 ) return new List<string> { s, s.Substring(1,1) + s.Substring(0,1) };
-
         var anagrams = new List<string>();
 
         for (var i = 0; i < s.Length; i++)
