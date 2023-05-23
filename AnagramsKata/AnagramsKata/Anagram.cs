@@ -8,15 +8,15 @@ public class Anagram
 
         if(s.Length == 2 ) return new List<string> { s, s.Substring(1,1) + s.Substring(0,1) };
 
-        return new List<string>()
+        var anagrams = new List<string>();
+
+        for (int i = 0; i < s.Length; i++)
         {
-            s.Substring(0,1) + Of(GetStringWithoutCharAt(s, 0))[0],
-            s.Substring(0,1) + Of(GetStringWithoutCharAt(s, 0))[1],
-            s.Substring(1,1) + Of(GetStringWithoutCharAt(s, 1))[0],
-            s.Substring(1,1) + Of(GetStringWithoutCharAt(s, 1))[1],
-            s.Substring(2,1) + Of(GetStringWithoutCharAt(s, 2))[0],
-            s.Substring(2,1) + Of(GetStringWithoutCharAt(s, 2))[1]
-        };
+            anagrams.Add(s.Substring(i, 1) + Of(GetStringWithoutCharAt(s, i))[0]);
+            anagrams.Add(s.Substring(i, 1) + Of(GetStringWithoutCharAt(s, i))[1]);
+        }
+
+        return anagrams;
     }
 
     private static string GetStringWithoutCharAt(string s, int index)
