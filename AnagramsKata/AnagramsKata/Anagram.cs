@@ -10,12 +10,12 @@ public class Anagram
 
         return new List<string>()
         {
-            "A" + "BC", 
-            "A" + "CB", 
-            "B" + "AC", 
-            "B" + "CA", 
-            "C" + "AB", 
-            "C" + "BA"
+            s.Substring(0,1) + "BC",
+            s.Substring(0,1) + "CB",
+            s.Substring(1,1) + "AC",
+            s.Substring(1,1) + "CA",
+            s.Substring(2,1) + "AB",
+            s.Substring(2,1) + "BA"
         };
     }
 }
