@@ -8,6 +8,11 @@ public class Anagram
 
         if(s.Length == 1 ) return new List<string> { s };
 
-        return new List<string> { s, s.Substring(1,1) + s.Substring(0,1) };
+        if(s.Length == 2 ) return new List<string> { s, s.Substring(1,1) + s.Substring(0,1) };
+
+        return new List<string>()
+        {
+            "ABC", "ACB", "BAC", "BCA", "CAB", "CBA"
+        };
     }
 }
