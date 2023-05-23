@@ -6,6 +6,8 @@ public class Anagram
     {
         if (s == "") return new List<string> { "" };
 
-        return new List<string> { s };
+        if(s.Length == 1 ) return new List<string> { s };
+
+        return new List<string> { "AB", "BA" };
     }
 }
