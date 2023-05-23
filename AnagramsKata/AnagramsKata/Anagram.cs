@@ -10,12 +10,20 @@ public class Anagram
 
         return new List<string>()
         {
-            s.Substring(0,1) + Of("BC")[0],
-            s.Substring(0,1) + Of("BC")[1],
-            s.Substring(1,1) + Of("AC")[0],
-            s.Substring(1,1) + Of("AC")[1],
-            s.Substring(2,1) + Of("AB")[0],
-            s.Substring(2,1) + Of("AB")[1]
+            s.Substring(0,1) + Of(GetStringWithoutCharAt(s, 0))[0],
+            s.Substring(0,1) + Of(GetStringWithoutCharAt(s, 0))[1],
+            s.Substring(1,1) + Of(GetStringWithoutCharAt(s, 1))[0],
+            s.Substring(1,1) + Of(GetStringWithoutCharAt(s, 1))[1],
+            s.Substring(2,1) + Of(GetStringWithoutCharAt(s, 2))[0],
+            s.Substring(2,1) + Of(GetStringWithoutCharAt(s, 2))[1]
         };
+    }
+
+    private static string GetStringWithoutCharAt(string s, int index)
+    {
+        var beforeIndexString = s.Substring(0, index);
+        var afterIndexString = s.Substring(index + 1, s.Length - (index + 1));
+
+        return beforeIndexString + afterIndexString;
     }
 }
